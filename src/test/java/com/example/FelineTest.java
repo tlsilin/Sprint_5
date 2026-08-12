@@ -53,7 +53,7 @@ class FelineTest {
 
     @ParameterizedTest
     @ValueSource(ints = {0, 1, 5, 100, -1})
-    public void getKittensWithParameterReturnsSameValue(int kittensCount) {
+    public void getKittensWithParameterReturnsValue(int kittensCount) {
         Feline feline = new Feline();
         assertEquals(kittensCount, feline.getKittens(kittensCount));
     }
