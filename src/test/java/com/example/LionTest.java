@@ -51,7 +51,7 @@ class LionTest {
 
         List<String> actualFood = lion.getFood();
 
-        assertEquals(expectedFood, actualFood, "Список еды должен совпадать с возвращаемым Feline.");
+        assertEquals(expectedFood, actualFood, "Список еды должен совпадать с возвращаемым Feline");
         verify(feline, times(1)).getFood("Хищник");
     }
 

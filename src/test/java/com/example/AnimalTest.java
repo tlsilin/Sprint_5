@@ -18,7 +18,6 @@ class AnimalTest {
         assertEquals("Неизвестный вид животного, используйте значение Травоядное или Хищник", exception.getMessage());
     }
 
-
     @Test
     public void getFamilyReturnsCorrectKind() {
         Animal animal = new Animal();

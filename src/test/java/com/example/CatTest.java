@@ -21,7 +21,7 @@ class CatTest {
     public void getSoundReturnsMeow() {
         Cat cat = new Cat(feline);
         String sound = cat.getSound();
-        assertEquals("Мяу", sound, "Метод getSound должен вернуть Мяу.");
+        assertEquals("Мяу", sound, "Метод getSound должен вернуть Мяу");
     }
 
     @Test

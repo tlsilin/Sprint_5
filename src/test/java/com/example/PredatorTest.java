@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PredatorTest {
 
     @Test
-    public void eatMeatReturnList() throws Exception {
+    public void eatMeatReturnsList() throws Exception {
         Predator predator = new Feline();
         List<String> result = predator.eatMeat();
         assertNotNull(result);
