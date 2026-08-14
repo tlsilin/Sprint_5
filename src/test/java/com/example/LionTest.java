@@ -36,12 +36,10 @@ class LionTest {
             "Самец, true",
             "Самка, false"
     })
-    public void doesHaveManeForMaleReturnsTrue() throws Exception {
-        Lion maleLion = new Lion("Самец", feline);
-        Lion femaleLion = new Lion("Самка", feline);
+    public void doesHaveManeReturnsExpectedResult(String sex, boolean expected) throws Exception {
+        Lion lion = new Lion(sex, feline);
 
-        assertTrue(maleLion.doesHaveMane(), "Самец имеет гриву");
-        assertFalse(femaleLion.doesHaveMane(), "Самка не имеет гриву");
+        assertEquals(expected, lion.doesHaveMane(), "Для пола '" + sex + "' ожидается наличие гривы: " + expected);
     }
 
     @Test
