@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class AnimalTest {
 
     @ParameterizedTest
@@ -17,7 +18,6 @@ class AnimalTest {
         Exception exception = assertThrows(Exception.class, () -> animal.getFood(unknownAnimalKind));
         assertEquals("Неизвестный вид животного, используйте значение Травоядное или Хищник", exception.getMessage());
     }
-
 
     @Test
     public void getFamilyReturnsCorrectKind() {

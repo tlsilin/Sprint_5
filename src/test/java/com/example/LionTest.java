@@ -14,6 +14,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+
 @ExtendWith(MockitoExtension.class)
 class LionTest {
     @Mock
@@ -35,12 +36,10 @@ class LionTest {
             "Самец, true",
             "Самка, false"
     })
-    public void doesHaveManeForMaleReturnsTrue() throws Exception {
-        Lion maleLion = new Lion("Самец", feline);
-        Lion femaleLion = new Lion("Самка", feline);
+    public void doesHaveManeReturnsExpectedResult(String sex, boolean expected) throws Exception {
+        Lion lion = new Lion(sex, feline);
 
-        assertTrue(maleLion.doesHaveMane(), "Самец имеет гриву");
-        assertFalse(femaleLion.doesHaveMane(), "Самка не имеет гриву");
+        assertEquals(expected, lion.doesHaveMane(), "Для пола '" + sex + "' ожидается наличие гривы: " + expected);
     }
 
     @Test
@@ -51,7 +50,7 @@ class LionTest {
 
         List<String> actualFood = lion.getFood();
 
-        assertEquals(expectedFood, actualFood, "Список еды должен совпадать с возвращаемым Feline.");
+        assertEquals(expectedFood, actualFood, "Список еды должен совпадать с возвращаемым Feline");
         verify(feline, times(1)).getFood("Хищник");
     }
 

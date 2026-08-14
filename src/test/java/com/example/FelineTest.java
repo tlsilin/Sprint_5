@@ -12,6 +12,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+
 @ExtendWith(MockitoExtension.class)
 class FelineTest {
 
@@ -53,7 +54,7 @@ class FelineTest {
 
     @ParameterizedTest
     @ValueSource(ints = {0, 1, 5, 100, -1})
-    public void getKittensWithParameterReturnsValue(int kittensCount) {
+    public void getKittensWithParameterReturnValue(int kittensCount) {
         Feline feline = new Feline();
         assertEquals(kittensCount, feline.getKittens(kittensCount));
     }
